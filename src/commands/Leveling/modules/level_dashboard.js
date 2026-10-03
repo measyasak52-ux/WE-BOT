@@ -29,7 +29,7 @@ function buildDashboardEmbed(cfg, guild) {
     const xpMin = cfg.xpRange?.min ?? cfg.xpPerMessage?.min ?? 15;
     const xpMax = cfg.xpRange?.max ?? cfg.xpPerMessage?.max ?? 25;
     const cooldown = cfg.xpCooldown ?? 60;
-    const rawMsg = cfg.levelUpMessage || '🎉 **LEVEL UP!** {user} បានឡើងដល់កម្រិត {level}!';
+    const rawMsg = cfg.levelUpMessage || '🎉LEVEL UP {user} បានឡើងដល់កម្រិត {level}!';
     const msgPreview = `\`${rawMsg.length > 60 ? rawMsg.substring(0, 60) + '…' : rawMsg}\``;
 
     const rewards = cfg.roleRewards ?? {};
